@@ -1,0 +1,351 @@
+:root {
+  --primary-base: #12122a;
+  --card-surface: #1e1e3f;
+  --primary-action: #6c63ff;
+  --accent-highlight: #00e0c7;
+  --text-color: #e0e0e0;
+  --divider-color: #42426f;
+  --star-color: gold;
+}
+
+/* --- Main Page Container --- */
+.Job-container {
+  background-color: var(--primary-base);
+  min-height: 100vh;
+}
+
+.job-card-details-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+/* --- Job Details Card (Main Content) --- */
+.item-details {
+  width: 95%;
+  max-width: 1100px;
+  background-color: var(--card-surface);
+  margin-top: 15px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Card Header/Metadata (Reusing JobCard styles) --- */
+/* Ensure your JS component uses these internal classes */
+
+.company-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.companyLogo {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  border-radius: 4px;
+}
+
+.company-title {
+  color: var(--text-color);
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+.star {
+  color: var(--star-color);
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.rating {
+  color: var(--text-color);
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+}
+
+.company-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+}
+
+.company-details {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.location,
+.type-icon {
+  color: var(--text-color);
+  font-size: 1.2rem;
+}
+
+.place {
+  color: var(--text-color);
+  font-size: 0.875rem;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+.salary {
+  color: var(--accent-highlight);
+  font-size: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.line1 {
+  border: none;
+  border-top: 1px solid var(--divider-color);
+  margin: 20px 0;
+}
+
+/* --- Description & Website Link --- */
+.website-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.website {
+  font-size: 1rem;
+  margin-right: 10px;
+  color: var(--accent-highlight);
+}
+
+.website-link2 {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: var(--accent-highlight);
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.website-link2:hover {
+  color: #00f0d7;
+}
+
+.job-description1,
+.job-description2 {
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.job-description2 {
+  margin-top: 30px;
+}
+
+.job-description-text {
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+/* --- Skills Section --- */
+.skill-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 20px;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.skill-card {
+  display: flex;
+  align-items: center;
+  width: 100%; /* Full width on mobile */
+  max-width: 280px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.skill-card img {
+  width: 40px;
+  height: 40px;
+}
+
+.job-description-text1 {
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  margin-left: 15px;
+  font-size: 1rem;
+}
+
+/* --- Life at Company --- */
+.office {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.company-building {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.job-description-text3 {
+  color: var(--text-color);
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Similar Jobs --- */
+.similar-container {
+  width: 95%;
+  max-width: 1100px;
+}
+
+.similar-products-heading {
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 30px 0 20px 0;
+}
+
+.similar-products-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-left: 0;
+  gap: 25px;
+}
+
+/* --- Mobile Responsiveness --- */
+@media screen and (min-width: 768px) {
+  .item-details {
+    padding: 30px;
+  }
+
+  .company-title {
+    font-size: 1.5rem;
+  }
+
+  .job-description1,
+  .job-description2 {
+    font-size: 1.75rem;
+  }
+
+  .skill-card {
+    width: 30%;
+  }
+
+  .office {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .job-description-text3 {
+    width: 55%;
+  }
+
+  .company-building {
+    width: 40%;
+  }
+
+  .similar-products-heading {
+    font-size: 2.25rem;
+    margin-top: 40px;
+  }
+
+  .similar-products-list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* --- Loader/Error Views --- */
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 30vh;
+}
+
+.products-error-view-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  width: 95%;
+  max-width: 500px;
+  margin-top: 30px;
+  background-color: var(--card-surface);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.products-failure-img {
+  width: 80%;
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+.product-failure-heading-text {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.products-failure-description {
+  color: var(--text-color);
+  opacity: 0.7;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.logout-btn {
+  background-color: var(--primary-action);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #5d55d8;
+  box-shadow: 0 0 10px rgba(108, 99, 255, 0.5);
+}

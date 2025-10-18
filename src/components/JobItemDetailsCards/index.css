@@ -1,0 +1,239 @@
+:root {
+  --primary-base: #12122a;
+  --card-surface: #1e1e3f;
+  --primary-action: #6c63ff;
+  --accent-highlight: #00e0c7;
+  --text-color: #e0e0e0;
+  --divider-color: #42426f;
+}
+
+/* --- Main Layout Container --- */
+.job-card {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 95%;
+  max-width: 1460px;
+  padding: 20px 0;
+}
+
+/* --- Sidebar (Profile & Filters) --- */
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+/* Horizontal line separator for filters (Reusing line class from FilterGroup) */
+.line {
+  border: none;
+  border-top: 1px solid var(--divider-color);
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* --- Search Bar --- */
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  width: 100%;
+  border: 1px solid var(--divider-color);
+  border-radius: 6px;
+  background-color: var(--card-surface);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar {
+  flex-grow: 1;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-color);
+  font-size: 1rem;
+  padding: 12px 15px;
+}
+
+.search-bar::placeholder {
+  color: #a0a0a0;
+  opacity: 0.7;
+}
+
+.icon {
+  background-color: var(--primary-action);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 12px 20px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.icon:hover {
+  background-color: #5d55d8;
+}
+
+.search-icon {
+  color: white;
+  font-size: 1.25rem;
+}
+
+/* --- Results Container (Search and Job List) --- */
+.results-container {
+  width: 100%;
+}
+
+.jobs-list-order {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* --- Loader View --- */
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+
+/* --- No Jobs Found View --- */
+.no-products-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.no-products-img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.no-products-heading {
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.no-products-description {
+  text-align: center;
+  color: var(--text-color);
+  opacity: 0.7;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  width: 90%;
+  max-width: 400px;
+}
+
+/* --- Failure View (Reusing styles from JobDetails) --- */
+.products-error-view-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  width: 100%;
+  max-width: 500px;
+  margin: 30px auto;
+  background-color: var(--card-surface);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.products-failure-img {
+  width: 80%;
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+.product-failure-heading-text {
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.products-failure-description {
+  text-align: center;
+  color: var(--text-color);
+  opacity: 0.7;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* Retry Button (Reusing header logout-btn style) */
+.logout-btn {
+  background-color: var(--primary-action);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #5d55d8;
+  box-shadow: 0 0 10px rgba(108, 99, 255, 0.5);
+}
+
+/* --- Desktop Layout (min-width: 768px) --- */
+@media screen and (min-width: 768px) {
+  .job-card {
+    flex-direction: row;
+    padding: 40px 0;
+    gap: 30px;
+  }
+
+  .side-bar {
+    width: 30%;
+    max-width: 330px;
+    position: sticky;
+    top: 0; /* Makes the sidebar sticky for better filtering experience */
+    margin-bottom: 0;
+  }
+
+  .results-container {
+    width: 70%;
+  }
+
+  .search-container {
+    margin-bottom: 30px;
+  }
+
+  .products-error-view-container,
+  .no-products-view {
+    margin-top: 50px;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .no-products-img {
+    width: 350px;
+  }
+
+  .no-products-heading {
+    font-size: 2rem;
+  }
+
+  .product-failure-heading-text {
+    font-size: 1.75rem;
+  }
+}

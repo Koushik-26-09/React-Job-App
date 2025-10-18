@@ -1,0 +1,125 @@
+:root {
+  --primary-base: #12122a; /* Dark Navy (Main Page BG) */
+  --card-surface: #1e1e3f; /* Deep Purple (Card BG) */
+  --primary-action: #6c63ff; /* Electric Violet (Button) */
+  --accent-highlight: #00e0c7; /* Neon Cyan (Focus/Glow) */
+  --text-color: #e0e0e0; /* Light Gray */
+  --error-color: #ff6b81; /* Soft Red for errors */
+}
+
+/* --- Main Login Screen --- */
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-base);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* --- Login Card (The Portal) --- */
+.login-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--card-surface);
+  width: 90%;
+  max-width: 450px; /* Constrained width for focus */
+  border-radius: 16px; /* High radius for a soft look */
+  padding: 40px 30px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7); /* Deep, rich shadow */
+  transition: transform 0.3s ease;
+}
+
+.login-card img {
+  width: 150px; /* Adjusting logo size */
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.input-label {
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+}
+
+/* --- Input Fields (Key Visual Detail) --- */
+.input-container {
+  background-color: transparent;
+  padding: 12px 15px;
+  outline: none;
+  border: 1px solid var(--divider-color); /* Subtle dark border */
+  border-radius: 8px;
+  color: var(--text-color);
+  font-size: 1rem;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.input-container:focus {
+  border-color: var(--accent-highlight); /* Neon Cyan border on focus */
+  box-shadow: 0 0 10px rgba(0, 224, 199, 0.3); /* Soft glow on focus */
+}
+
+.input-container::placeholder {
+  color: #a0a0a0;
+  opacity: 0.6;
+}
+
+/* --- Login Button (Primary Action) --- */
+.login-button {
+  background-color: var(--primary-action);
+  margin-top: 40px;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 14px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+  letter-spacing: 0.05em;
+}
+
+.login-button:hover {
+  background-color: #5d55d8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(108, 99, 255, 0.4);
+}
+
+/* --- Error Message --- */
+.error-message {
+  align-self: start;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  font-family: 'Roboto', sans-serif;
+  color: var(--error-color);
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .login-card {
+    width: 40%;
+    max-width: 500px;
+    padding: 60px 50px;
+  }
+}

@@ -1,0 +1,78 @@
+:root {
+  --primary-base: #12122a;
+  --card-surface: #1e1e3f;
+  --primary-action: #6c63ff;
+  --accent-highlight: #00e0c7;
+  --text-color: #e0e0e0;
+}
+
+/* --- Profile Section (Success View) --- */
+.filter-section {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/profile-bg.png');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 200px;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-image {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%; /* Modern profile image style */
+}
+
+.profile-username {
+  font-size: 1.35rem;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  color: var(--primary-action); /* Electric Violet for username */
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.profile-bio {
+  color: black;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+  padding-top: 10px;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
+/* --- Loader and Failure View Containers --- */
+.loader-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 200px;
+  background-color: var(--card-surface);
+  border-radius: 12px;
+}
+
+/* --- Failure View Button (Retry) --- */
+.logout-btn {
+  background-color: var(--primary-action);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #5d55d8;
+  box-shadow: 0 0 10px rgba(108, 99, 255, 0.5);
+}

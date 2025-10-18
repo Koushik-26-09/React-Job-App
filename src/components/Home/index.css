@@ -1,0 +1,89 @@
+.home-container {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/home-lg-bg.png');
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.home-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 50px;
+  min-height: 100vh;
+  width: 40%;
+}
+
+.home-heading {
+  color: white;
+  font-family: 'Roboto';
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.home-description {
+  color: #ffffff;
+  font-size: 26px;
+  font-family: 'Roboto';
+}
+
+.home-button {
+  margin-top: 20px;
+  background-color: blue;
+  color: white;
+  font-family: 'Roboto';
+  padding: 15px 20px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  width: 150px;
+  border-radius: 10px;
+}
+@media screen and (max-width: 767px) {
+  .home-container {
+    background-image: url('https://assets.ccbp.in/frontend/react-js/home-lg-bg.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px; /* Smaller padding for mobile */
+    min-height: 100vh;
+    width: 90%; /* Full width on mobile */
+    align-items: flex-start; /* Left-align content */
+  }
+
+  .home-heading {
+    font-size: 36px; /* Smaller heading for mobile */
+    font-weight: bold;
+    color: white;
+    text-align: left;
+  }
+
+  .home-description {
+    font-size: 18px; /* Smaller description */
+    color: #ffffff;
+    margin-top: 10px;
+    text-align: left;
+  }
+
+  .home-button {
+    margin-top: 20px;
+    background-color: blue;
+    color: white;
+    font-size: 14px; /* Smaller font for mobile */
+    padding: 12px 18px;
+    width: 140px; /* Adjusted width */
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    align-self: flex-start; /* Keep button left-aligned */
+    cursor: pointer;
+  }
+}

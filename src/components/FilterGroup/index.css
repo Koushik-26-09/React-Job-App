@@ -1,0 +1,121 @@
+:root {
+  --primary-base: #12122A;
+  --card-surface: #1E1E3F;
+  --primary-action: #6C63FF;
+  --accent-highlight: #00E0C7;
+  --text-color: #E0E0E0;
+  --divider-color: #42426F;
+}
+
+.filter-group-container {
+  background-color: var(--card-surface);
+  border-radius: 12px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3),
+              0 10px 10px -5px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  width: 100%;
+  max-width: 320px;
+}
+
+@media screen and (min-width: 768px) {
+  .filter-group-container {
+    padding: 1.5rem;
+  }
+}
+
+.category-heading {
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--divider-color);
+}
+
+@media screen and (min-width: 768px) {
+  .category-heading {
+    font-size: 1.25rem;
+    margin-top: 2rem;
+  }
+}
+
+.categories-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.categories-list li {
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-label {
+  color: var(--text-color);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-left: 0.75rem;
+  transition: color 0.2s ease;
+}
+
+.categories-list li:hover .checkbox-label {
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .checkbox-label {
+    font-size: 1rem;
+  }
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #6B7280;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+input[type="checkbox"] {
+  border-radius: 4px;
+}
+
+input[type="radio"] {
+  border-radius: 50%;
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  background-color: var(--accent-highlight);
+  border-color: transparent;
+}
+
+input[type="checkbox"]:focus,
+input[type="radio"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(0, 224, 199, 0.4),
+              0 0 0 8px var(--card-surface);
+}
+
+.line {
+  border: none;
+  border-top: 1px solid var(--divider-color);
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .line {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
